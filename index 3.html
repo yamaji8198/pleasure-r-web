@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pleasure-R Web | 個人事業主・小さなお店のホームページ制作</title>
+<meta name="description" content="Pleasure-R Webは個人事業主・小規模店舗向けのホームページ制作サービスです。スマホ対応、買い切り型、分かりやすい料金で、集客につながるホームページをご提案します。">
+<meta property="og:title" content="Pleasure-R Web | 小さなお店のホームページ制作">
+<meta property="og:description" content="個人事業主・小規模店舗向け。伝わる・見つかる・問い合わせにつながるホームページを。">
+<style>
+:root{
+  --navy:#173452;
+  --blue:#276da8;
+  --gold:#d9a32b;
+  --gold2:#f1bf44;
+  --ink:#223240;
+  --muted:#6d7884;
+  --bg:#f7fafc;
+  --white:#fff;
+  --line:#e6ebef;
+  --soft:#eef5f8;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.8;
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1160px,92%);margin:auto}
+
+header{
+  position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);
+  backdrop-filter:blur(12px);border-bottom:1px solid rgba(23,52,82,.08)
+}
+.nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-weight:700;font-size:1.85rem;color:var(--navy)}
+.brand small{display:block;font-family:inherit;font-style:normal;font-size:.58rem;letter-spacing:.06em;margin-top:-6px}
+.menu{display:flex;align-items:center;gap:22px;font-size:.9rem;font-weight:700}
+.menu a:hover{color:var(--gold)}
+.header-cta{
+  background:linear-gradient(135deg,var(--gold),var(--gold2));color:white;
+  padding:12px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(217,163,43,.25)
+}
+
+.hero{
+  background:
+    radial-gradient(circle at 85% 25%,rgba(217,163,43,.16),transparent 24%),
+    linear-gradient(135deg,#fbfdff,#eef7fa);
+  overflow:hidden
+}
+.hero-grid{display:grid;grid-template-columns:1.03fr .97fr;align-items:center;min-height:680px;gap:48px;padding:74px 0}
+.eyebrow{font-size:.78rem;letter-spacing:.2em;color:var(--gold);font-weight:900}
+h1{
+  font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif;
+  color:var(--navy);font-size:clamp(2.6rem,6vw,5.2rem);
+  line-height:1.22;margin:.18em 0
+}
+h1 .gold{color:var(--gold)}
+.hero p{font-size:1.06rem;font-weight:650;color:#4d6071;max-width:650px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:15px 24px;border-radius:999px;font-weight:800;border:1px solid var(--line);
+  transition:.2s;cursor:pointer
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:white;border:0;box-shadow:0 12px 30px rgba(217,163,43,.26)}
+.btn-secondary{background:white;color:var(--navy)}
+.hero-note{margin-top:18px;font-size:.88rem;color:#7f8b95}
+.hero-visual{
+  position:relative;min-height:450px;border-radius:34px;
+  background:
+    linear-gradient(rgba(18,53,82,.10),rgba(18,53,82,.10)),
+    url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=80") center/cover;
+  box-shadow:0 30px 70px rgba(25,56,81,.18)
+}
+.hero-visual:before{
+  content:"Pleasure-R Web";position:absolute;left:8%;bottom:10%;
+  background:rgba(255,255,255,.92);color:var(--navy);padding:16px 20px;border-radius:16px;
+  font-family:Georgia,serif;font-style:italic;font-size:1.3rem
+}
+.hero-visual:after{
+  content:"小さなお店の、大きな一歩を。";position:absolute;right:-14px;top:42px;
+  background:white;padding:15px 18px;border-radius:16px;box-shadow:0 12px 30px rgba(23,52,82,.12);
+  color:var(--navy);font-weight:800
+}
+
+.trust{border-bottom:1px solid var(--line);border-top:1px solid var(--line);background:white}
+.trust-grid{display:grid;grid-template-columns:repeat(5,1fr)}
+.trust-item{text-align:center;padding:28px 16px;border-right:1px solid var(--line)}
+.trust-item:last-child{border-right:0}
+.icon{font-size:1.7rem}
+.trust-item b{display:block;color:var(--navy);margin-top:4px}
+.trust-item span{display:block;color:var(--muted);font-size:.78rem;line-height:1.5;margin-top:4px}
+
+section{padding:94px 0}
+.section-title{text-align:center;margin-bottom:46px}
+.kicker{font-weight:900;letter-spacing:.18em;color:var(--gold);font-size:.76rem}
+h2{
+  font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif;
+  color:var(--navy);font-size:clamp(2rem,4.5vw,3.4rem);line-height:1.25;margin:8px 0 10px
+}
+.section-title p{color:var(--muted);max-width:760px;margin:auto}
+
+.problem{background:var(--bg)}
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.problem-card,.solution-card{
+  background:white;border:1px solid var(--line);border-radius:24px;padding:30px
+}
+.problem-card h3,.solution-card h3{color:var(--navy);margin-top:0}
+.checks{list-style:none;padding:0;margin:0}
+.checks li{padding:9px 0 9px 30px;position:relative}
+.checks li:before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:900}
+
+.samples{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.sample-card{
+  border:1px solid var(--line);border-radius:24px;overflow:hidden;background:white;
+  box-shadow:0 15px 40px rgba(20,51,77,.08);transition:.25s
+}
+.sample-card:hover{transform:translateY(-6px)}
+.sample-cover{height:230px;position:relative;display:flex;align-items:flex-end;padding:22px;color:white}
+.sample-cover:before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.72),rgba(0,0,0,.06))}
+.sample-cover>*{position:relative}
+.cake{background:url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=80") center/cover}
+.reform{background:url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=80") center/cover}
+.moto{background:url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=80") center/cover}
+.sample-cover h3{font-family:Georgia,"Yu Mincho",serif;font-size:1.8rem;margin:0}
+.sample-body{padding:24px}
+.chip{display:inline-block;padding:5px 10px;border-radius:999px;background:#f4f7f9;color:var(--navy);font-size:.76rem;font-weight:800}
+.sample-body p{color:var(--muted);font-size:.93rem}
+.sample-link{display:flex;justify-content:center;margin-top:16px;background:#eef4f7;padding:13px;border-radius:999px;color:var(--navy);font-weight:900}
+
+.value{background:linear-gradient(135deg,#f8fbfd,#eef6fa)}
+.value-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.value-visual{
+  min-height:420px;border-radius:28px;background:
+  url("https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1400&q=80") center/cover;
+  box-shadow:0 20px 50px rgba(23,52,82,.12)
+}
+.value-list{display:grid;gap:14px}
+.value-item{display:flex;gap:13px;align-items:flex-start;background:white;border:1px solid var(--line);border-radius:18px;padding:18px}
+.value-item strong{color:var(--navy)}
+.value-item span{color:var(--muted);font-size:.91rem;display:block}
+
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.price-card{border:1px solid var(--line);border-radius:24px;padding:28px;background:white;position:relative}
+.price-card.featured{border:2px solid var(--gold);box-shadow:0 16px 40px rgba(217,163,43,.14)}
+.ribbon{position:absolute;top:16px;right:16px;background:var(--gold);color:white;padding:5px 10px;border-radius:999px;font-size:.72rem;font-weight:900}
+.price-card h3{color:var(--navy);margin:0}
+.price{font-size:2.2rem;font-weight:900;color:var(--navy);margin:10px 0}
+.price small{font-size:.82rem;color:var(--muted)}
+.price-card ul{padding-left:20px;color:var(--muted)}
+
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.step{background:white;border:1px solid var(--line);border-radius:20px;padding:24px}
+.step-num{color:var(--gold);font-weight:900;font-size:.8rem}
+.step h3{color:var(--navy);margin:6px 0}
+
+.faq{background:var(--bg)}
+details{background:white;border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin-bottom:12px}
+summary{font-weight:900;color:var(--navy);cursor:pointer}
+details p{color:var(--muted);margin-bottom:0}
+
+.cta-section{padding:80px 0}
+.cta-box{
+  text-align:center;border-radius:30px;padding:58px 24px;
+  background:linear-gradient(135deg,var(--navy),#245a84);color:white
+}
+.cta-box h2{color:white}
+.cta-box p{max-width:700px;margin:14px auto 26px;color:#dce8f0}
+
+footer{padding:36px 0;border-top:1px solid var(--line)}
+.footer{display:flex;justify-content:space-between;gap:24px;align-items:center;flex-wrap:wrap}
+.footer p{color:var(--muted);font-size:.82rem}
+
+@media(max-width:920px){
+  .menu{display:none}
+  .hero-grid,.value-grid,.problem-grid{grid-template-columns:1fr}
+  .hero-grid{padding:52px 0}
+  .hero-visual{min-height:360px}
+  .trust-grid{grid-template-columns:repeat(2,1fr)}
+  .trust-item{border-bottom:1px solid var(--line)}
+  .samples,.pricing{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  section{padding:72px 0}
+  .hero-grid{min-height:auto}
+  h1{font-size:2.75rem}
+  .hero-visual{min-height:300px}
+  .hero-visual:after{right:10px;top:18px;font-size:.8rem}
+  .trust-grid{grid-template-columns:1fr}
+  .trust-item{border-right:0}
+  .flow{grid-template-columns:1fr}
+  .btn{width:100%}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top">Pleasure-R Web<small>Small Business Web Studio</small></a>
+    <nav class="menu">
+      <a href="#service">サービス</a>
+      <a href="#works">制作サンプル</a>
+      <a href="#price">料金</a>
+      <a href="#flow">制作の流れ</a>
+      <a href="#faq">よくある質問</a>
+      <a class="header-cta" href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">WEB DESIGN FOR SMALL BUSINESS</div>
+      <h1>小さなお店の<br><span class="gold">“やりたい”</span>を<br>カタチに。</h1>
+      <p>個人店・個人事業主・小規模事業者のためのホームページ制作。写真や文章がまだ揃っていなくても、構成から一緒に整理して、スマホで見やすく「相談してみたい」と思われるサイトを作ります。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">まずは相談する →</a>
+        <a class="btn btn-secondary" href="#works">制作サンプルを見る</a>
+      </div>
+      <div class="hero-note">買い切り型プラン対応 ｜ スマホ対応 ｜ 小規模事業者向け</div>
+    </div>
+    <div class="hero-visual" aria-label="Pleasure-R Web イメージ"></div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="container trust-grid">
+    <div class="trust-item"><div class="icon">♡</div><b>初めてでも安心</b><span>専門用語を減らしてご案内</span></div>
+    <div class="trust-item"><div class="icon">▣</div><b>スマホ対応</b><span>スマートフォンで見やすく</span></div>
+    <div class="trust-item"><div class="icon">✎</div><b>文章整理もサポート</b><span>何を載せるか一緒に考える</span></div>
+    <div class="trust-item"><div class="icon">⌂</div><b>個人事業主向け</b><span>お店・職人・サービス業に</span></div>
+    <div class="trust-item"><div class="icon">☆</div><b>必要十分な設計</b><span>大げさにせず、伝わる形へ</span></div>
+  </div>
+</div>
+
+<section id="service" class="problem">
+  <div class="container">
+    <div class="section-title">
+      <div class="kicker">FOR SMALL BUSINESS</div>
+      <h2>こんな悩み、ありませんか？</h2>
+      <p>「ホームページは欲しい。でも高い・難しい・何を書けばいいか分からない。」そんな個人事業主のための制作サービスです。</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <h3>よくある悩み</h3>
+        <ul class="checks">
+          <li>SNSだけではサービス内容を全部伝えきれない</li>
+          <li>昔作ったホームページがスマホで見づらい</li>
+          <li>制作会社に頼むと高額になりそうで不安</li>
+          <li>文章や構成を自分で考えるのが大変</li>
+          <li>問い合わせにつながる導線が分からない</li>
+        </ul>
+      </div>
+      <div class="solution-card">
+        <h3>Pleasure-R Webが目指すこと</h3>
+        <ul class="checks">
+          <li>最初に「誰に何を伝えるか」を整理</li>
+          <li>スマホで読みやすいシンプルな構成</li>
+          <li>料金・強み・サービス内容を分かりやすく</li>
+          <li>電話だけに頼らない問い合わせ導線</li>
+          <li>営業時にも見せられる“信頼の土台”を作る</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="works">
+  <div class="container">
+    <div class="section-title">
+      <div class="kicker">DESIGN SAMPLES</div>
+      <h2>3つの制作サンプル</h2>
+      <p>業種によって、お客様が見たい情報も、伝えるべき雰囲気も変わります。下の3サイトは実際に公開している制作サンプルです。</p>
+    </div>
+
+    <div class="samples">
+      <article class="sample-card">
+        <div class="sample-cover cake"><h3>ケーキ・洋菓子店</h3></div>
+        <div class="sample-body">
+          <span class="chip">飲食・店舗</span>
+          <p>商品の魅力やお店の世界観が伝わる、やさしく上品なデザイン。</p>
+          <a class="sample-link" href="https://yamaji8198.github.io/patisserie-lumiere/" target="_blank" rel="noopener">このサイトを見る ↗</a>
+        </div>
+      </article>
+
+      <article class="sample-card">
+        <div class="sample-cover reform"><h3>リフォーム店</h3></div>
+        <div class="sample-body">
+          <span class="chip">リフォーム・工務店</span>
+          <p>施工事例や安心感を見せながら、相談につながる構成を意識。</p>
+          <a class="sample-link" href="https://yamaji8198.github.io/kurashi-reform/" target="_blank" rel="noopener">このサイトを見る ↗</a>
+        </div>
+      </article>
+
+      <article class="sample-card">
+        <div class="sample-cover moto"><h3>バイク修理・整備</h3></div>
+        <div class="sample-body">
+          <span class="chip">専門店・修理</span>
+          <p>技術・専門性・安心感を強く伝える、力のあるデザイン。</p>
+          <a class="sample-link" href="https://yamaji8198.github.io/moto-repair-hp/" target="_blank" rel="noopener">このサイトを見る ↗</a>
+        </div>
+      </article>
+    </div>
+    <p style="text-align:center;color:#7b8790;font-size:.82rem;margin-top:18px">※上記は営業用の制作サンプルです。実在企業から受注した制作実績を示すものではありません。</p>
+  </div>
+</section>
+
+<section class="value">
+  <div class="container value-grid">
+    <div class="value-visual"></div>
+    <div>
+      <div class="kicker">WHY WEBSITE</div>
+      <h2 style="text-align:left">ホームページは、<br>24時間働く営業ツール。</h2>
+      <div class="value-list">
+        <div class="value-item"><div>✓</div><div><strong>信頼をつくる</strong><span>料金・サービス・考え方を1か所にまとめて見せられます。</span></div></div>
+        <div class="value-item"><div>✓</div><div><strong>SNSから受け皿を作る</strong><span>InstagramやTikTokから詳しい情報へ案内できます。</span></div></div>
+        <div class="value-item"><div>✓</div><div><strong>問い合わせにつなげる</strong><span>「何を頼めるのか」を整理し、次の行動を分かりやすくします。</span></div></div>
+        <div class="value-item"><div>✓</div><div><strong>営業にも使える</strong><span>名刺やDMからURLを送るだけで、サービス内容をまとめて伝えられます。</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="price">
+  <div class="container">
+    <div class="section-title">
+      <div class="kicker">PRICE</div>
+      <h2>分かりやすい料金から。</h2>
+      <p>最初から大きなサイトを作る必要はありません。必要な情報量に合わせて選べる3プラン。</p>
+    </div>
+    <div class="pricing">
+      <div class="price-card">
+        <h3>LIGHT</h3>
+        <div class="price">29,800円<small>〜</small></div>
+        <ul><li>1ページ構成</li><li>スマホ対応</li><li>基本情報・サービス紹介</li><li>問い合わせ導線</li></ul>
+      </div>
+      <div class="price-card featured">
+        <div class="ribbon">おすすめ</div>
+        <h3>STANDARD</h3>
+        <div class="price">49,800円<small>〜</small></div>
+        <ul><li>情報量の多い1ページ構成</li><li>スマホ対応</li><li>料金・FAQ・強みを掲載</li><li>文章構成サポート</li></ul>
+      </div>
+      <div class="price-card">
+        <h3>GROWTH</h3>
+        <div class="price">79,800円<small>〜</small></div>
+        <ul><li>より充実したページ設計</li><li>集客を意識した構成</li><li>複数サービスの整理</li><li>公開後の改善相談</li></ul>
+      </div>
+    </div>
+    <p style="text-align:center;color:#7b8790;font-size:.82rem;margin-top:18px">※正式料金は内容・ページ数・機能を確認したうえでお見積りします。独自ドメイン等の外部費用が必要な場合は事前にご案内します。</p>
+  </div>
+</section>
+
+<section id="flow" style="background:#fbfcfd">
+  <div class="container">
+    <div class="section-title">
+      <div class="kicker">FLOW</div>
+      <h2>制作の流れ</h2>
+    </div>
+    <div class="flow">
+      <div class="step"><div class="step-num">STEP 01</div><h3>ご相談</h3><p>業種・目的・困っていることを確認します。</p></div>
+      <div class="step"><div class="step-num">STEP 02</div><h3>構成・お見積り</h3><p>載せる内容と料金を分かりやすく整理します。</p></div>
+      <div class="step"><div class="step-num">STEP 03</div><h3>制作・確認</h3><p>実際の画面を見ながら内容を調整します。</p></div>
+      <div class="step"><div class="step-num">STEP 04</div><h3>公開</h3><p>最終確認後、ホームページを公開します。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="faq">
+  <div class="container">
+    <div class="section-title">
+      <div class="kicker">FAQ</div>
+      <h2>よくある質問</h2>
+    </div>
+    <details><summary>ホームページの内容がまだ決まっていません。</summary><p>大丈夫です。業種、サービス、お客様に伝えたいことを聞きながら、必要な構成を一緒に整理します。</p></details>
+    <details><summary>写真が少なくても作れますか？</summary><p>可能です。お手持ちの写真を確認し、必要な素材や準備方法をご案内します。</p></details>
+    <details><summary>月額料金はかかりますか？</summary><p>制作費は買い切り型を基本としています。ただし独自ドメインや有料サービス等を利用する場合は、そのサービスの維持費が別途必要になる場合があります。</p></details>
+    <details><summary>スマートフォンでも見やすくなりますか？</summary><p>はい。スマートフォン表示を前提にレイアウトを調整します。</p></details>
+  </div>
+</section>
+
+<section id="contact" class="cta-section">
+  <div class="container">
+    <div class="cta-box">
+      <div class="kicker" style="color:#ffd470">CONTACT</div>
+      <h2>小さなビジネスに、<br>大きな可能性を。</h2>
+      <p>「ホームページを作るべきか分からない」という段階でも大丈夫です。まずは業種と現在のお悩みを聞かせてください。</p>
+      <a class="btn btn-primary" href="mailto:">お問い合わせ窓口 準備中</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer">
+    <div class="brand">Pleasure-R Web<small>Small Business Web Studio</small></div>
+    <p>© 2026 Pleasure-R Web. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
