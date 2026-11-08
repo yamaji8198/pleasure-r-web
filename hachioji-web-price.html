@@ -59,6 +59,14 @@ img { display: block; width: 100%; height: auto; border: 1px solid #dce5ea; bord
     <a class="button" href="mailto:info@pleasure-r.com">メールで制作を相談する</a>
   </section>
 </main>
+<script>
+document.addEventListener('click', (event) => {
+  const link = event.target.closest('a[href^="mailto:"]');
+  if (link && typeof gtag === 'function') {
+    gtag('event', 'contact_email_click');
+  }
+});
+</script>
 </body>
 </html>
 
